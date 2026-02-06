@@ -1,0 +1,25 @@
+name: WCD Bank DevOps Workflow
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Welcome message
+        run: echo "Welcome to WCD Bank Cloud Migration Project!"
+      
+      - name: Display timestamp
+        run: date
+      
+      - name: System information
+        run: |
+          echo "Running on Ubuntu"
+          echo "DevOps automation in progress..." 
